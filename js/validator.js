@@ -10,7 +10,7 @@ formulario.addEventListener(
 const telefono = document.getElementById("phone").value.trim();
 
 //elementos de error
-const errorNombre = document.getElementById("errorAge");
+const errorNombre = document.getElementById("errorName");
 const errorAge = document.getElementById("errorAge");
 const errorEmail = document.getElementById("errorEmail");
 const errorPhone = document.getElementById("errorPhone");
@@ -20,32 +20,36 @@ const mensaje = document.getElementById("message");
 //tecnica de centinela
 let valido = true;
 if(nombre === ""){
-    errorName.textContent = "El nombre es obligatorio."
+    errorName.textContent = "El nombre es obligatorio.";
     valido = false;
 }else{
     errorName.textcontent = "";
 }
-let valido = true;
+if (edad !="" && (edad<18 || edad>45)){
+    errorAge.textContent = "La edad debe de estar entre 18 y 45.";
+    valido = false;
+}else{
+    errorAge.textContent = "";
+}
 if(email === ""){
-    errorEmail.textContent = "El correo electronico es obligatorio."
+    errorEmail.textContent = "El correo electronico es obligatorio.";
     valido = false;
 }else{
     errorEmail.textContent = "";
 }
-let valido = true;
 if(phone === ""){
-    errorPhone.textContent = "El telefono es obligatorio."
+    errorPhone.textContent = "El telefono es obligatorio.";
     valido = false;
 }else{
     errorPhone.textContent = "";
 }
-let valido=true;
-if (valido){
+if (valido ===""){
     mensaje.textContent = "registro correcto";
-    valido=false
+    valido=false;
 }else{
     mensaje.textContent = "";
 }
+
 
 }
 

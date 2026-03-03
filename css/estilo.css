@@ -1,11 +1,13 @@
 body{
- background-color: #f3f1ec;
+ background-color: #e2c782;
  font-family: Arial, Helvetica, sans-serif;
  margin: 40px;
 }
+
 h1{
     font-family: 'Courier New', Courier, monospace;
 }
+
 input{
     display: block;
     margin-bottom: 10px;
@@ -13,10 +15,7 @@ input{
     width: 100%;
     box-sizing: border-box;
 }
-error{
-    color: red;
-    front-size: 14px;
-}
+
 select{
     display: block;
     margin-bottom: 10px;
@@ -24,6 +23,16 @@ select{
      width: 100%;
     box-sizing: border-box;
 }
+
+.error{
+    display:block;
+    margin-bottom: 8px;
+    color:red;
+    font-size: 14px;
+}
+
 .succes {
-    
+    color: green;
+    font-weight: bold;
+    margin-top: 15px;
 }
