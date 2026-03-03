@@ -39,8 +39,10 @@ if(phone === ""){
 }else{
     errorPhone.textContent = "";
 }
+let valido=true;
 if (valido){
     mensaje.textContent = "registro correcto";
+    valido=false
 }else{
     mensaje.textContent = "";
 }
